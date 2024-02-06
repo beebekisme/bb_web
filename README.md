@@ -1,4 +1,4 @@
-# Astrofy | Personal Portfolio Website Template
+# BB BLOG
 
 My Personal Blog and Portfolio website.
 
