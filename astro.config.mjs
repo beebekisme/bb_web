@@ -18,6 +18,6 @@ export default defineConfig({
       transformers: []
     }
   },
-  output: "static",
+  output: "hybrid",
   adapter: vercel()
 });
