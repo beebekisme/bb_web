@@ -35,7 +35,7 @@ Plant diseases pose a serious challenge to global food security and agricultural
 |------------------------------------------|------------------------------------------|-----------------------------------------|-----------------------------------------|
 | ![Image 1](/blog_img/paper/ds_grape.JPG) | ![Image 2](/blog_img/paper/he_grape.JPG) | ![Image 3](/blog_img/paper/de_corn.JPG) | ![Image 4](/blog_img/paper/he_corn.jpg) |
 
-<div style="text-align: justify"> \
+<div style="text-align: justify"> 
 
 The dataset that we use for our paper is the <b>New Plant Diseases Dataset (NPDD)</b>, which is a publicly available dataset of plant images with different diseases. The NPDD contains 87,848 images of healthy and diseased plant leaves, belonging to 38 classes of 14 crop species. The crop species are apple, blueberry, cherry, corn, grape, orange, peach, bell pepper, potato, raspberry, soybean, squash, strawberry, and tomato. The images are in JPEG format and have a resolution of 256 x 256 pixels. The images are collected under controlled conditions, with uniform backgrounds and lighting. The images are labeled with the crop species and the disease name, such as `Apple___Apple_scab` or `Corn___Common_rust`. The **NPDD** is one of the largest and most diverse datasets of plant disease images available to date.
 
