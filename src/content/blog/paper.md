@@ -19,6 +19,7 @@ tags: ["ML", "Python"]
 5. [CNN Model Architecture](#CNN)
 6. [Training the Model](#train)
 7. [Training and Validation Accuracy and Pickling the Model](#train_val)
+8. [Conclusion](#conclusion)
 
 ## Abstract <a name="abstract"></a>
 <div style="text-align: justify">  
@@ -347,7 +348,7 @@ Test Accuracy: 95.1578947
 
 ```
 
-## Conclusion
+## Conclusion <a name="conclusion"></a>
 <div style="text-align: justify">
 In this paper, we have presented a deep learning-based approach for plant disease detection using convolutional neural networks (CNNs). We have used a large and diverse dataset of plant images with different diseases and augmented it with various image transformations. We have designed and trained a CNN model that can classify plant images into 38 disease categories with high accuracy. The model has achieved a test accuracy of 95.15%. This paper demonstrates the potential of deep learning for plant disease detection and provides a useful tool for farmers and researchers. The model can be used to detect plant diseases early and accurately, prevent crop losses, and reduce the use of harmful pesticides. We used it for production at Agrisense software suite and it showed great potential with faster test results. 
 
