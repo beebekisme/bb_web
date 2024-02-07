@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bb-web-rho.vercel.app/',
+  site: 'https://beebekisme.vercel.app/',
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     shikiConfig: {
