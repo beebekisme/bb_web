@@ -7,6 +7,8 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://beebekisme.vercel.app/",
+  base: "/",
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     shikiConfig: {
@@ -16,6 +18,6 @@ export default defineConfig({
       transformers: []
     }
   },
-  output: "server",
+  output: "static",
   adapter: vercel()
 });
