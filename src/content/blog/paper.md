@@ -18,6 +18,7 @@ tags: ["ML", "Python"]
 5. [Label Binarizer](#lab_bin) 
 5. [CNN Model Architecture](#CNN)
 6. [Training the Model](#train)
+7. [Training and Validation Accuracy and Pickling the Model](#train_val)
 
 ## Abstract <a name="abstract"></a>
 <div style="text-align: justify">  
@@ -312,5 +313,60 @@ Epoch 5/15
 44/47 [===========================>..] - ETA: 21s - loss: 0.1189 - accuracy: 0.8328
 ```
 
+</div>
 
+## Training and Validation Accuracy and Pickling the Model <a name="train_val"></a>
+<div style="text-align: justify">
+
+Next we evaluate the model accuracy and pickle the model. The `evaluate` method is used to evaluate the model on the test data. It takes the test images and labels as input and returns the test loss and accuracy. The `scores` object returned by the `evaluate` method is assigned to the variable `scores`. It contains the test loss and accuracy. The test accuracy is printed to the standard output. 
+
+The `pickle` module is used to dump the `label_binarizer` object into a file named **plant_disease_label_transform.pkl**. By saving the `label_binarizer` object, we can reuse it later to transform new labels or inverse transform binary vectors back to labels. This is useful for preparing the labels for image classification tasks, where it needs to encode the labels into a format that can be used by machine learning algorithms.
+</div>
+
+
+```py
+# Evaluating Model Accuracy 
+print("[INFO] Calculating model accuracy")
+scores = model.evaluate(x_test, y_test)
+print(f"Test Accuracy: {scores[1]*100}")
+
+# Pickling 
+print("[INFO] Saving label transform...")
+filename = 'dis_classify.pkl'
+image_labels = pickle.load(open(filename, 'rb'))
+print("[Info] Pickled the model...")])
+```
+#### Console Output
+
+```bash
+[INFO] Calculating model accuracy
+Test Accuracy: 95.1578947
+
+[INFO] Saving label transform...
+[Info] Pickled the model...
+
+```
+
+## Conclusion
+<div style="text-align: justify">
+In this paper, we have presented a deep learning-based approach for plant disease detection using convolutional neural networks (CNNs). We have used a large and diverse dataset of plant images with different diseases and augmented it with various image transformations. We have designed and trained a CNN model that can classify plant images into 38 disease categories with high accuracy. The model has achieved a test accuracy of 95.15%. This paper demonstrates the potential of deep learning for plant disease detection and provides a useful tool for farmers and researchers. The model can be used to detect plant diseases early and accurately, prevent crop losses, and reduce the use of harmful pesticides. We used it for production at Agrisense software suite and it showed great potential with faster test results. 
+
+Another beautiful thing about this model is that we can use any dataset that can fit the `LabelBinarizer` and `ImageDataGenerator` classes from the `sklearn.preprocessing` and `keras.preprocessing.image` modules respectively. This makes it very versatile and can be used for a wide range of applications not limiting to Plant Disease Detection. 
+
+However, this model was designed and made during Microsoft Imagine Cup and was specifically tailored for plant disease detection. Plus the 36 plants doesn't represent all the plants that a farmer can grow. This is just a starting point and can be improved upon. We left the model further trainable so it can grow with more data and more classes. 
+</div>
+
+## References
+- [Deep Learning for Plant Disease Detection and Diagnosis](https://www.frontiersin.org/articles/10.3389/fpls.2016.01419/full)
+
+## Acknowledgements
+- [NPDD Dataset](https://www.kaggle.com/vipoooool/new-plant-diseases-dataset)
+- [Microsoft Imagine Cup](https://imaginecup.microsoft.com/en-us)
+
+<div style="text-align: center">
+
+# Model Designed and Trained by
+## Bibek Bhatta
+[LinkedIn](https://www.linkedin.com/in/bibek-bhatta-b232312aa/)
+[GitHub](https://github.com/beebekisme)
 </div>
